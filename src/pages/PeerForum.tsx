@@ -286,8 +286,6 @@ const PeerForum = () => {
       views: 280,
       isAnonymous: true
     }
-
-
   ];
 
   const handleCreatePost = () => {

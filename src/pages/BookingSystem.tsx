@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Shield, User, Phone, Mail, Lock } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import emailjs from "emailjs-com"
 
 const BookingSystem = () => {
   const [selectedTimeSlot, setSelectedTimeSlot] = useState<string>("");
@@ -96,8 +97,8 @@ const BookingSystem = () => {
                 <div
                   key={counselor.id}
                   className={`p-4 rounded-lg border transition-all duration-300 ${counselor.available
-                      ? 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
-                      : 'border-muted bg-muted/30 opacity-60'
+                    ? 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
+                    : 'border-muted bg-muted/30 opacity-60'
                     }`}
                 >
                   <div className="flex justify-between items-start mb-2">

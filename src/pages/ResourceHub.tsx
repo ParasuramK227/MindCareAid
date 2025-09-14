@@ -4,10 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  BookOpen, 
-  Video, 
-  Headphones, 
+import {
+  BookOpen,
+  Video,
+  Headphones,
   Download,
   Search,
   Clock,
@@ -28,7 +28,7 @@ const ResourceHub = () => {
       count: 24
     },
     {
-      id: "depression", 
+      id: "depression",
       name: "Depression & Mood",
       color: "bg-purple-100 text-purple-800",
       count: 18
@@ -36,7 +36,7 @@ const ResourceHub = () => {
     {
       id: "academic",
       name: "Academic Pressure",
-      color: "bg-green-100 text-green-800", 
+      color: "bg-green-100 text-green-800",
       count: 32
     },
     {
@@ -66,23 +66,26 @@ const ResourceHub = () => {
       category: "Academic Pressure",
       readTime: "8 min read",
       rating: 4.8,
-      type: "article"
+      type: "article",
+      link: "https://ndpublisher.in/admin/issues/EQv8no3s.pdf"
     },
     {
-      title: "5-Minute Breathing Exercises for Instant Calm", 
+      title: "5-Minute Breathing Exercises for Instant Calm",
       description: "Simple breathing techniques you can use anywhere to reduce anxiety and stress.",
       category: "Anxiety & Stress",
       readTime: "5 min read",
       rating: 4.9,
-      type: "article"
+      type: "article",
+      link: "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/"
     },
     {
       title: "Building Healthy Sleep Habits in College",
       description: "Evidence-based tips for improving sleep quality despite demanding academic schedules.",
-      category: "Sleep & Wellness", 
+      category: "Sleep & Wellness",
       readTime: "12 min read",
       rating: 4.7,
-      type: "article"
+      type: "article",
+      link: "https://health.cornell.edu/resources/health-topics/sleep"
     }
   ];
 
@@ -93,15 +96,17 @@ const ResourceHub = () => {
       category: "Anxiety & Stress",
       duration: "15:30",
       rating: 4.9,
-      type: "video"
+      type: "video",
+      link: "https://youtu.be/_1h-zizAGsc?si=lo0zudsKf96z5LTf"
     },
     {
       title: "Mindfulness for Students: Finding Balance",
       description: "Learn mindfulness techniques specifically designed for busy student life.",
       category: "Self-Care",
-      duration: "22:45", 
+      duration: "22:45",
       rating: 4.8,
-      type: "video"
+      type: "video",
+      link: "https://youtu.be/7CBfCW67xT8?si=6iITzzsMF-3wBY2V"
     },
     {
       title: "Dealing with Perfectionism in Academics",
@@ -109,7 +114,8 @@ const ResourceHub = () => {
       category: "Academic Pressure",
       duration: "18:20",
       rating: 4.6,
-      type: "video"
+      type: "video",
+      link: "https://youtu.be/mi-kD8_dyKw?si=QorFfeyKsoHczNEA"
     }
   ];
 
@@ -120,15 +126,17 @@ const ResourceHub = () => {
       category: "Sleep & Wellness",
       duration: "20:00",
       rating: 4.9,
-      type: "audio"
+      type: "audio",
+      link: "https://music.youtube.com/watch?v=PqIOavQTNtQ&si=7lIiKUZAaxVuj6Dd"
     },
     {
       title: "Confidence Building Affirmations",
       description: "Daily affirmations to boost self-esteem and academic confidence.",
-      category: "Self-Care", 
+      category: "Self-Care",
       duration: "12:30",
       rating: 4.7,
-      type: "audio"
+      type: "audio",
+      link: "https://music.youtube.com/watch?v=hjxz7EKghEc&si=ubMCRsCME_iTwKQo"
     },
     {
       title: "Anxiety Relief Nature Sounds",
@@ -136,7 +144,8 @@ const ResourceHub = () => {
       category: "Anxiety & Stress",
       duration: "45:00",
       rating: 4.8,
-      type: "audio"
+      type: "audio",
+      link: "https://music.youtube.com/watch?v=Xbjzkbi4OcA&si=1EN6aTfCiNhL3ays"
     }
   ];
 
@@ -159,17 +168,17 @@ const ResourceHub = () => {
         </div>
         <CardTitle className="text-lg leading-tight">{resource.title}</CardTitle>
       </CardHeader>
-      
+
       <CardContent className="space-y-4">
         <p className="text-calm text-sm leading-relaxed">{resource.description}</p>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-1 text-muted-foreground">
             <Clock className="h-4 w-4" />
             <span className="text-sm">{resource.readTime || resource.duration}</span>
           </div>
-          
-          <Button size="sm" className="btn-primary">
+
+          <Button size="sm" className="btn-primary" onClick={() => window.open(`${resource.link}`, "_blank")}>
             {resource.type === 'article' ? 'Read' : resource.type === 'video' ? 'Watch' : 'Listen'}
           </Button>
         </div>
@@ -189,7 +198,7 @@ const ResourceHub = () => {
             <h1 className="text-3xl font-bold text-foreground">Psychoeducational Resource Hub</h1>
           </div>
           <p className="text-lg text-calm max-w-2xl mx-auto">
-            Evidence-based resources, tools, and content to support your mental health journey. 
+            Evidence-based resources, tools, and content to support your mental health journey.
             All materials are curated by licensed professionals and designed specifically for students.
           </p>
         </div>
@@ -288,8 +297,8 @@ const ResourceHub = () => {
           <CardContent className="space-y-4">
             <h3 className="text-xl font-semibold">Student Mental Health Toolkit</h3>
             <p className="text-calm">
-              A comprehensive guide covering essential mental health topics for students, including stress management, 
-              healthy relationships, and academic balance. This evidence-based resource is developed specifically 
+              A comprehensive guide covering essential mental health topics for students, including stress management,
+              healthy relationships, and academic balance. This evidence-based resource is developed specifically
               for the Indian student context.
             </p>
             <div className="flex items-center space-x-4">
@@ -298,11 +307,18 @@ const ResourceHub = () => {
               <Badge variant="outline">PDF Available</Badge>
             </div>
             <div className="flex space-x-3">
-              <Button className="btn-primary">
+              <Button className="btn-primary" onClick={() => {
+                const link = document.createElement("a");
+                link.href = "./src/lib/Mental Health Toolkit for Young People.pdf";
+                link.download = "./src/lib/Mental Health Toolkit for Young People.pdf";
+                link.click();
+              }}>
                 <Download className="h-4 w-4 mr-2" />
                 Download PDF
               </Button>
-              <Button variant="outline" className="btn-secondary">
+              <Button variant="outline" className="btn-secondary" onClick={() => {
+                window.open("https://www.unicef.org/thailand/media/7211/file/Mental%20Health%20Toolkit%20for%20Young%20People.pdf", "_blank")
+              }}>
                 Read Online
               </Button>
             </div>
