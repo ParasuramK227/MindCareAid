@@ -33,7 +33,7 @@ const BookingSystem = () => {
       available: true
     },
     {
-      id: "2", 
+      id: "2",
       name: "Dr. Rajesh Kumar",
       speciality: "Academic Pressure & Performance",
       experience: "12 years",
@@ -44,7 +44,7 @@ const BookingSystem = () => {
       id: "3",
       name: "Dr. Meera Patel",
       speciality: "Depression & Mood Disorders",
-      experience: "6 years", 
+      experience: "6 years",
       languages: ["Hindi", "English", "Gujarati"],
       available: false
     }
@@ -68,7 +68,7 @@ const BookingSystem = () => {
             <h1 className="text-3xl font-bold text-foreground">Confidential Counseling Sessions</h1>
           </div>
           <p className="text-lg text-calm max-w-2xl mx-auto">
-            Book a private, one-on-one session with our licensed mental health professionals. 
+            Book a private, one-on-one session with our licensed mental health professionals.
             All sessions are completely confidential and conducted in a safe, judgment-free environment.
           </p>
         </div>
@@ -77,7 +77,7 @@ const BookingSystem = () => {
         <Alert className="mb-8 border-success/50 bg-success/5">
           <Shield className="h-4 w-4 text-success" />
           <AlertDescription>
-            <strong>Your Privacy is Protected:</strong> All sessions are encrypted, confidential, and follow strict privacy protocols. 
+            <strong>Your Privacy is Protected:</strong> All sessions are encrypted, confidential, and follow strict privacy protocols.
             Your personal information is never shared without your explicit consent.
           </AlertDescription>
         </Alert>
@@ -95,11 +95,10 @@ const BookingSystem = () => {
               {counselors.map((counselor) => (
                 <div
                   key={counselor.id}
-                  className={`p-4 rounded-lg border transition-all duration-300 ${
-                    counselor.available 
-                      ? 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer' 
+                  className={`p-4 rounded-lg border transition-all duration-300 ${counselor.available
+                      ? 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
                       : 'border-muted bg-muted/30 opacity-60'
-                  }`}
+                    }`}
                 >
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-semibold text-foreground">{counselor.name}</h3>
@@ -163,13 +162,13 @@ const BookingSystem = () => {
                         <SelectItem value="2nd">2nd Year</SelectItem>
                         <SelectItem value="3rd">3rd Year</SelectItem>
                         <SelectItem value="4th">4th Year</SelectItem>
-                        <SelectItem value="postgrad">Post Graduate</SelectItem>
+                        <SelectItem value="postgrad">Post Graduate</SelectItem>cd
                       </SelectContent>
                     </Select>
                   </div>
 
-                  <Button 
-                    onClick={() => setBookingStep(2)} 
+                  <Button
+                    onClick={() => setBookingStep(2)}
                     className="btn-primary w-full"
                   >
                     Continue to Schedule
@@ -204,7 +203,7 @@ const BookingSystem = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="concerns">What would you like to discuss? (Optional)</Label>
-                    <Textarea 
+                    <Textarea
                       id="concerns"
                       placeholder="Share any specific concerns or topics you'd like to address in your session..."
                       className="min-h-[100px]"
@@ -226,14 +225,14 @@ const BookingSystem = () => {
                   </div>
 
                   <div className="flex space-x-3">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       onClick={() => setBookingStep(1)}
                       className="btn-secondary flex-1"
                     >
                       Back
                     </Button>
-                    <Button 
+                    <Button
                       onClick={handleBooking}
                       disabled={!selectedTimeSlot}
                       className="btn-primary flex-1"
@@ -284,7 +283,7 @@ const BookingSystem = () => {
         <Alert className="mt-8 border-destructive/50 bg-destructive/5">
           <Phone className="h-4 w-4 text-destructive" />
           <AlertDescription>
-            <strong>Need immediate help?</strong> If you're experiencing a mental health crisis, 
+            <strong>Need immediate help?</strong> If you're experiencing a mental health crisis,
             please call our crisis helpline at <strong>1800-MINDCARE</strong> or contact emergency services at 102.
           </AlertDescription>
         </Alert>

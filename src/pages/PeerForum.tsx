@@ -5,12 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { 
-  Users, 
-  MessageSquare, 
-  Plus, 
-  ThumbsUp, 
-  Clock, 
+import {
+  Users,
+  MessageSquare,
+  Plus,
+  ThumbsUp,
+  Clock,
   Shield,
   Eye,
   Search,
@@ -61,12 +61,12 @@ const PeerForum = () => {
       isAnonymous: true
     },
     {
-      id: "2", 
+      id: "2",
       title: "Managing anxiety during presentations",
       content: "I get really nervous during class presentations. My heart races and I can't think clearly. Any tips from fellow students?",
       author: "Anonymous Student",
       timestamp: new Date(Date.now() - 5 * 60 * 60 * 1000),
-      category: "Anxiety & Worry", 
+      category: "Anxiety & Worry",
       replies: 7,
       likes: 15,
       views: 62,
@@ -88,14 +88,206 @@ const PeerForum = () => {
       id: "4",
       title: "Finding motivation when everything feels pointless",
       content: "Lately I've been struggling to find meaning in my studies. Everything feels overwhelming and pointless. Anyone else going through this?",
-      author: "Anonymous Student", 
+      author: "Anonymous Student",
       timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000),
       category: "General Support",
       replies: 31,
       likes: 42,
       views: 156,
       isAnonymous: true
+    }, {
+      id: "5",
+      title: "Unable to focus despite long study hours",
+      content: "I spend hours at my desk but end up distracted and unproductive. The more I try, the worse it gets. Tips or similar experiences?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
+      category: "Time Management",
+      replies: 18,
+      likes: 29,
+      views: 98,
+      isAnonymous: true
+    },
+    {
+      id: "6",
+      title: "Panic attacks before exams — how to cope?",
+      content: "My heart races and I can't breathe before exams. Breathing exercises help a bit but it returns. What else works for you?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000),
+      category: "Exam Anxiety",
+      replies: 44,
+      likes: 64,
+      views: 240,
+      isAnonymous: true
+    },
+    {
+      id: "7",
+      title: "Feeling isolated after switching courses",
+      content: "Switched majors this semester and lost most friends. Days feel lonely and I doubt my decision. Any advice on rebuilding connections?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),
+      category: "Social Pressure",
+      replies: 12,
+      likes: 20,
+      views: 71,
+      isAnonymous: true
+    },
+    {
+      id: "8",
+      title: "Thoughts of quitting during group projects",
+      content: "Group members aren't contributing and I'm burnt out carrying everything. I want to quit but worried about grades. Has anyone handled this?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 30 * 60 * 1000),
+      category: "Academic Stress",
+      replies: 27,
+      likes: 35,
+      views: 132,
+      isAnonymous: true
+    },
+    {
+      id: "9",
+      title: "Finding affordable mental health resources",
+      content: "I want to talk to a counselor but cost is a barrier. Looking for low-cost or campus resources and how effective they are.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000),
+      category: "Mental Health Resources",
+      replies: 22,
+      likes: 31,
+      views: 110,
+      isAnonymous: true
+    },
+    {
+      id: "10",
+      title: "Comparing myself to peers and feeling inadequate",
+      content: "Seeing classmates' achievements on social media makes me feel like a failure. How do you stop constant comparison?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
+      category: "General Support",
+      replies: 39,
+      likes: 58,
+      views: 201,
+      isAnonymous: true
+    }, {
+      id: "11",
+      title: "Struggling with sleep schedule",
+      content: "No matter how hard I try, I end up sleeping late and waking up tired. It's affecting my studies and mood badly.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 4 * 60 * 60 * 1000),
+      category: "Lifestyle",
+      replies: 25,
+      likes: 37,
+      views: 121,
+      isAnonymous: true
+    },
+    {
+      id: "12",
+      title: "Homesickness in the first semester",
+      content: "I thought I’d be excited for college, but being away from family has been harder than I imagined. How do you cope with homesickness?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000),
+      category: "Adjustment",
+      replies: 19,
+      likes: 28,
+      views: 90,
+      isAnonymous: true
+    },
+    {
+      id: "13",
+      title: "Struggling with group presentation anxiety",
+      content: "Even thinking about presenting in front of classmates gives me shivers. I want to improve but don’t know how to start.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000),
+      category: "Public Speaking",
+      replies: 41,
+      likes: 50,
+      views: 176,
+      isAnonymous: true
+    },
+    {
+      id: "14",
+      title: "Financial stress while studying",
+      content: "Part-time job helps but not enough to cover everything. Constantly worried about money instead of focusing on academics.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+      category: "Financial Pressure",
+      replies: 33,
+      likes: 42,
+      views: 159,
+      isAnonymous: true
+    },
+    {
+      id: "15",
+      title: "Perfectionism holding me back",
+      content: "I waste hours redoing assignments because they never feel good enough. It’s exhausting and makes me fall behind.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000),
+      category: "Productivity",
+      replies: 28,
+      likes: 46,
+      views: 140,
+      isAnonymous: true
+    },
+    {
+      id: "16",
+      title: "Feeling burnt out before midterms",
+      content: "Studied nonstop for weeks but now I feel drained and can’t focus. How do you recharge without losing progress?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 36 * 60 * 60 * 1000),
+      category: "Academic Stress",
+      replies: 47,
+      likes: 61,
+      views: 210,
+      isAnonymous: true
+    },
+    {
+      id: "17",
+      title: "Struggling to ask for help from professors",
+      content: "I hesitate to email professors even when I’m lost in class. Afraid of looking dumb. Anyone else deal with this?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 9 * 60 * 60 * 1000),
+      category: "Communication",
+      replies: 21,
+      likes: 30,
+      views: 104,
+      isAnonymous: true
+    },
+    {
+      id: "18",
+      title: "Balancing extracurriculars with academics",
+      content: "I love clubs and activities but my grades are slipping. How do you balance both without burning out?",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
+      category: "Balance",
+      replies: 35,
+      likes: 44,
+      views: 162,
+      isAnonymous: true
+    },
+    {
+      id: "19",
+      title: "Dealing with constant self-doubt",
+      content: "Even small mistakes make me question if I belong here. Tired of this negative loop.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 14 * 60 * 60 * 1000),
+      category: "Self-Esteem",
+      replies: 30,
+      likes: 39,
+      views: 125,
+      isAnonymous: true
+    },
+    {
+      id: "20",
+      title: "Pressure from family expectations",
+      content: "Family expects me to score top grades and pursue a career I’m not passionate about. Feels like I’m living for them, not me.",
+      author: "Anonymous Student",
+      timestamp: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000),
+      category: "Family Pressure",
+      replies: 52,
+      likes: 73,
+      views: 280,
+      isAnonymous: true
     }
+
+
   ];
 
   const handleCreatePost = () => {
@@ -108,7 +300,7 @@ const PeerForum = () => {
     const now = new Date();
     const diff = now.getTime() - timestamp.getTime();
     const hours = Math.floor(diff / (1000 * 60 * 60));
-    
+
     if (hours < 1) return "Just now";
     if (hours < 24) return `${hours}h ago`;
     return `${Math.floor(hours / 24)}d ago`;
@@ -116,8 +308,8 @@ const PeerForum = () => {
 
   const filteredPosts = forumPosts.filter(post => {
     const matchesCategory = selectedCategory === "all" || post.category === categories.find(c => c.id === selectedCategory)?.name;
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         post.content.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.content.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -133,7 +325,7 @@ const PeerForum = () => {
             <h1 className="text-3xl font-bold text-foreground">Peer Support Community</h1>
           </div>
           <p className="text-lg text-calm max-w-2xl mx-auto">
-            A safe, anonymous space to connect with fellow students who understand your challenges. 
+            A safe, anonymous space to connect with fellow students who understand your challenges.
             Share experiences, offer support, and find solidarity in a moderated environment.
           </p>
         </div>
@@ -142,7 +334,7 @@ const PeerForum = () => {
         <Alert className="mb-8 border-primary/50 bg-primary/5">
           <Shield className="h-4 w-4 text-primary" />
           <AlertDescription>
-            <strong>Community Guidelines:</strong> This is a safe space for mutual support. All posts are anonymous and moderated. 
+            <strong>Community Guidelines:</strong> This is a safe space for mutual support. All posts are anonymous and moderated.
             Please be respectful, supportive, and remember that this community is here to help each other thrive.
           </AlertDescription>
         </Alert>
@@ -160,7 +352,7 @@ const PeerForum = () => {
               />
             </div>
           </div>
-          
+
           <Dialog open={isCreatingPost} onOpenChange={setIsCreatingPost}>
             <DialogTrigger asChild>
               <Button className="btn-primary">
@@ -177,7 +369,7 @@ const PeerForum = () => {
                   <label className="text-sm font-medium">Discussion Title</label>
                   <Input placeholder="What would you like to discuss?" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Category</label>
                   <select className="w-full p-2 border border-border rounded-md bg-background">
@@ -187,32 +379,32 @@ const PeerForum = () => {
                     ))}
                   </select>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Your Message</label>
-                  <Textarea 
+                  <Textarea
                     placeholder="Share your thoughts, experiences, or questions. Remember, this is a supportive community."
                     className="min-h-[120px]"
                   />
                 </div>
-                
+
                 <Alert className="border-warning/50 bg-warning/5">
                   <AlertTriangle className="h-4 w-4 text-warning" />
                   <AlertDescription className="text-xs">
-                    All posts are anonymous and will be reviewed by moderators before appearing. 
+                    All posts are anonymous and will be reviewed by moderators before appearing.
                     Please follow community guidelines and be respectful.
                   </AlertDescription>
                 </Alert>
-                
+
                 <div className="flex space-x-3">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     onClick={() => setIsCreatingPost(false)}
                     className="btn-secondary flex-1"
                   >
                     Cancel
                   </Button>
-                  <Button 
+                  <Button
                     onClick={handleCreatePost}
                     className="btn-primary flex-1"
                   >
@@ -230,11 +422,10 @@ const PeerForum = () => {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-primary text-primary-foreground'
-                  : `${category.color} hover:scale-105`
-              }`}
+              className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.id
+                ? 'bg-primary text-primary-foreground'
+                : `${category.color} hover:scale-105`
+                }`}
             >
               {category.name}
             </button>
@@ -275,12 +466,12 @@ const PeerForum = () => {
                     </div>
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <p className="text-calm leading-relaxed line-clamp-2">
                     {post.content}
                   </p>
-                  
+
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
@@ -296,7 +487,7 @@ const PeerForum = () => {
                         <span>{post.views}</span>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center space-x-1">
                       <Clock className="h-4 w-4" />
                       <span>{getTimeAgo(post.timestamp)}</span>
@@ -314,7 +505,7 @@ const PeerForum = () => {
             <Shield className="h-8 w-8 text-success mx-auto mb-3" />
             <h3 className="font-semibold mb-2">Moderated Community</h3>
             <p className="text-sm text-calm">
-              Our peer support forum is actively moderated by trained volunteers and mental health professionals 
+              Our peer support forum is actively moderated by trained volunteers and mental health professionals
               to ensure a safe, supportive environment for all students.
             </p>
           </CardContent>
